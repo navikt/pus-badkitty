@@ -12,7 +12,3 @@ healthcheck:
   readiness:
     path: badkitty/internal/selftest
     initialDelay: 20
-fasitResources:
-  used:
-  - alias: loadbalancer:badkitty
-    resourceType: loadbalancerconfig
