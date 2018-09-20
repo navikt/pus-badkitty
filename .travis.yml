@@ -6,7 +6,7 @@ services:
 env:
   global:
     - TZ='Europe/Oslo'
-    - RELEASE_VERSION="$(if \[ git rev-parse --is-shallow-repository \]; then git fetch --unshallow; else git fetch; fi) && echo $(git rev-list --count $TRAVIS_COMMIT).$(date +\"%Y%m%d\").$(date +\"%H%M\")"
+    - RELEASE_VERSION="$(git branch | grep \* | cut -d ' ' -f2)"
     - APPLICATION_NAME='badkitty'
     - DOCKER_IMAGE_FULL_NAME="navikt/$APPLICATION_NAME:$RELEASE_VERSION"
 
