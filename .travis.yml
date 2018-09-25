@@ -8,7 +8,7 @@ env:
     - TZ='Europe/Oslo'
     - DATE="$(date +%Y%m%d)"
     - TIME="$(date +%H%M)"
-    - COMMIT_NUMBER="$((git fetch --unshallow || true ) && git rev-list --count $TRAVIS_COMMIT)
+    - COMMIT_NUMBER="$((git fetch --unshallow || true ) && git rev-list --count $TRAVIS_COMMIT)"
     - RELEASE_VERSION="$COMMIT_NUMBER.$DATE.$TIME"
     - APPLICATION_NAME='badkitty'
     - DOCKER_IMAGE_FULL_NAME="navikt/$APPLICATION_NAME:$RELEASE_VERSION"
