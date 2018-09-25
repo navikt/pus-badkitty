@@ -15,7 +15,7 @@ env:
     - DOCKER_IMAGE_FULL_NAME="navikt/$APPLICATION_NAME:$RELEASE_VERSION"
 
 before_install:
-  - docker build -t $APPLICATION_NAME:$RELEASE_VERSION .
+  - docker build -t $DOCKER_IMAGE_FULL_NAME .
 
 deploy:
   provider: script
