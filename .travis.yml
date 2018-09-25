@@ -14,7 +14,7 @@ env:
     - DOCKER_IMAGE_FULL_NAME="navikt/$APPLICATION_NAME:$RELEASE_VERSION"
 
 before_install:
-  - docker build -t $APPLICATION_NAME:$RELEASE_iVERSION .
+  - docker build -t $APPLICATION_NAME:$RELEASE_VERSION .
 
 #after_deploy:
 #  - git remote add auth-origin "https://${GITHUB_ACCESS_TOKEN}@github.com/${TRAVIS_REPO_SLUG}"
