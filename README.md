@@ -11,6 +11,8 @@ Inneholder også testdata som ser ut som fnr:
 
 10108000398
 
+FOO
+
 ---
 
 # Henvendelser
